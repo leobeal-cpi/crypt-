@@ -14,7 +14,7 @@ class App
         $rsa = RSA::load($publicKeyContent)->withHash('sha512')->withMGFHash('sha512');
         $curTime = round(microtime(true) * 1000);
 
-        $tokenArray = array();
+        $tokenArray = [];
         $tokenArray['ApiKey'] = $apiKey;
         $tokenArray['ApiSecret'] = $apiSecret;
         $tokenArray['TokenCreationTime'] = $curTime;
